@@ -1,0 +1,29 @@
+/* CurrentWeather.css */
+
+.current-weather-container {
+    background: #f0f8ff52;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+}
+
+.current-weather-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.weather-info {
+    display: inline-block;
+}
+
+.weather-info img {
+    width: 64x;
+    height: 64px;
+}
+
+.weather-info-details {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

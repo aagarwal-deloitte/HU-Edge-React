@@ -1,18 +1,16 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './components/Home';
-import WeatherPage from './components/Weather'
+import HomePage from './pages/HomePage';
+import WeatherPage from './pages/WeatherPage'
+import './App.css';
 
 function App() {
   return (
     <Router>
-      <div style={{ padding: '2rem', fontFamily: 'Arial' }}>
-        <h1>Weather Forecast App</h1>
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<HomePage />} />
           <Route path='/weather/:city' element={<WeatherPage />} />
         </Routes>
-      </div>
     </Router>
   );
 }
