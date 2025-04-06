@@ -1,4 +1,5 @@
-HU-Edge-React
+# HU-Edge-React
+
 Assignment for HU-Edge-React Track.
 
 The weather-app folder contains all the configurations file related to the project and the src folder contains the actual code logic.
