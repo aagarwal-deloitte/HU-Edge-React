@@ -14,6 +14,7 @@ The HomePage.js holds all the components of the HomePage and the WeatherPage.js 
 The url of the applications are:
 
 Homepage: http://localhost:3000
+
 Citypage: http://localhost:3000/{city}
 
 To run the application, make sure you are inside the parent weather_app directory.
