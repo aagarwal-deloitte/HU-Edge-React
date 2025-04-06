@@ -28,8 +28,12 @@ function ForecastDisplay({ forecast }) {
                 <div className="days-wrapper">
                     {forecast.map((day, i) => (
                         <div key={i} className="day-card">
-                            <img src={day.day.condition.icon} alt=" " />
-                            <strong>{day.date}</strong> - {Math.round(day.day.avgtemp_c)}°C - {day.day.condition.text}
+                            <p><strong>{day.date}</strong></p>
+                            <p>{Math.round(day.day.avgtemp_c)}°C</p>
+                            <div className="weather-info-details">
+                                <span>{day.day.condition.text}</span>
+                                <img src={day.day.condition.icon} alt=" " />
+                            </div>
                         </div>
                     ))}
                 </div>

@@ -3,15 +3,12 @@
 html,
 body,
 #root {
-    height: 100%;
-    margin: 0;
+    margin-right: 25px;
     padding: 0;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    background-image: url('./assets/sunset.jpg');
+    background-image: url('./assets/background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

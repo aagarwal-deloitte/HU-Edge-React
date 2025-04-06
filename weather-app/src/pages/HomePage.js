@@ -3,11 +3,11 @@ import { useNavigate } from "react-router-dom";
 import useWeatherData from '../hooks/useWeatherData';
 import CurrentWeatherDisplay from "../components/CurrentWeather";
 import ForecastDisplay from "../components/ForecastDisplay";
-import './WeatherPage.css'
+import './HomePage.css';
 
 function HomePage() {
     const [query, setQuery] = useState(null);
-    const { weather, loading, error } = useWeatherData(query);
+    const { weather, error } = useWeatherData(query);
     const [city, setCity] = useState('');
     const navigate = useNavigate();
 
@@ -36,22 +36,19 @@ function HomePage() {
     if (!weather) return <p>Loading...</p>;
 
     return (
-        <div className="weather-page">
+        <div className="home-page">
             <div style={{ padding: '0.4rem' }}>
                 <input
                     type="text"
                     placeholder="Search by city"
                     value={city}
                     onChange={(e) => setCity(e.target.value)}
-                    style={{ padding: '0.5rem', fontSize: '1rem', marginRight: '0.5rem', borderRadius: '25px', border:'1px solid rgba(255,255,255, 0.8)'}}
+                    style={{ padding: '0.5rem', fontSize: '1rem', marginLeft: '1.2rem', marginRight: '0.5rem', borderRadius: '25px', border: '1px solid rgba(255,255,255, 0.8)' }}
                 />
-                <button onClick={handleSearch} style={{ marginTop: '1rem', padding: '0.5rem', borderRadius: '25px', border:'1px solid rgba(255,255,255, 0.8)'}}>Search</button>
-
-                <div className="current-weather-section">
-                    <CurrentWeatherDisplay weather={weather} />
-                </div>
+                <button onClick={handleSearch} style={{ padding: '0.5rem', borderRadius: '25px', border: '1px solid rgba(255,255,255, 0.8)' }}>Search</button>
+                <CurrentWeatherDisplay weather={weather} />
             </div>
-            <div className="forecast-section">
+            <div>
                 <ForecastDisplay forecast={weather?.forecast?.forecastday} />
             </div>
         </div>

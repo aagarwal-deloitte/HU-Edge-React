@@ -2,9 +2,14 @@
 
 .forecast-container {
     background: #f0f8ff52;
-    padding: 1.5rem;
-    border-radius: 10px;
+    padding: 20px;
+    border-radius: 12px;
     box-shadow: o 2px 8px rgba(0,0,0,0.1);
+    width: 60vw;
+    height: fit-content;
+    flex: 1;
+    overflow-y: auto;
+    margin-top: 20px;
 }
 
 .forecast-title {
@@ -16,16 +21,15 @@
 .days-wrapper {
     display: flex;
     gap: 1rem;
-    flex-wrap: wrap;
 }
 
 .day-card {
-    background: #f0f8ff52;
+    background: rgba(255, 255, 255, 0.174);
     padding: 0.6rem;
     border-radius: 8px;
     box-shadow: 0 1px 6px rgba(0,0,0,0.1);
     text-align: center;
-    min-width: 4rem;
+    margin-bottom: 20px;
 }
 
 .day-card img {
@@ -36,13 +40,13 @@
 .hourly-wrapper {
     display: flex;
     gap: 1rem;
-    overflow-x: auto;
     padding-bottom: 1rem;
-    scroll-snap-type: x mandatory;
+    width: 60vw;
+    overflow: auto;
 }
 
 .hour-card {
-    background: #f0f8ff52;
+    background: rgba(95, 92, 92, 0.178);
     padding: 0.6rem;
     border-radius: 8px;
     box-shadow: 0 1px 6px rgba(0,0,0,0.1);
@@ -56,4 +60,3 @@
     width: 48px;
     height: 48px;
 }
-
